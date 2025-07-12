@@ -31,12 +31,13 @@ function createTimeline() {
 
     // Create scale
     const xScale = d3.scaleLinear()
+        // .domain([1693, 2025])
         .domain([1980, 2025])
         .range([0, width]);
 
     // Create and call axis
     const xAxis = d3.axisTop(xScale)
-        .ticks(10)
+        .ticks(20)
         .tickFormat(d3.format("d"))
         .tickSize(15);
 
@@ -52,7 +53,7 @@ function createTimeline() {
 
         // Create and call axis
     const xAxisMinor = d3.axisTop(xScale)
-        .ticks(50)
+        .ticks(10)
         .tickFormat("")
         .tickSize(6);
 
@@ -76,8 +77,7 @@ function createTimeline() {
         .append("circle")
         .attr("cx", d => xScale(d.year))
         .attr("cy", height/2)
-        .attr("r", 3)
-        .attr("fill", "#3f51b5");
+        .attr("r", 3);
 
     editionGroup.selectAll("text")
         .data(editions)
@@ -87,7 +87,6 @@ function createTimeline() {
         .attr("y", d => d.above ? height/2 - 28 : height/2 + 15)
         .attr("text-anchor", "middle")
         .attr("font-size", "8px")
-        .attr("fill", "#3f51b5")
         .attr("font-weight", "bold")
         .text(d => `${d.label} (${d.year})`);
 }

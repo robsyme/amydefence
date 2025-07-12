@@ -1,4 +1,4 @@
-.slide h1, .slide h2, .slide h3 {
+.slide h1, .slide h2, .slide h3, .slide h4 {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -19,6 +19,12 @@
     font-size: 2em;
     color: #444;
     font-weight: 300;
+}
+
+.slide h4.chapter {
+    font-size: 2em;
+    font-weight: 700;
+    color: #016b54;
 }
 
 .book {
@@ -150,15 +156,15 @@
     box-sizing: border-box;
 }
 
-.future .slide,
-.past .slide {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
 .present .slide {
     opacity: 1;
     transition: opacity 0.5s ease;
+}
+
+svg text {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .slide img {
@@ -167,30 +173,73 @@
     object-fit: contain;
 }
 
+.impress-on-ldtl-title-slide-3 #title {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
 
-.impress-on-ldtl-title #uwa-law-library,
+.impress-on-title h4,
+.impress-on-title .bb,
+.impress-on-title #library-list,
+.impress-on-title #ldtl-ed5-cartoon,
+.impress-on-title #ldtl-ed5-excerpts,
+.impress-on-photo h4,
+.impress-on-photo .bb,
+.impress-on-photo #library-list,
+.impress-on-photo #ldtl-ed5-cartoon,
+.impress-on-photo #ldtl-ed5-excerpts,
+.impress-on-photo #title,
+.foo {
+    opacity: 0;
+}
+
+.impress-on-ldtl-ed5-cartoon #library-list {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-title #uwa-law-library,
 .impress-on-photo #uwa-law-library {
     opacity: 0;
     transition: opacity 1s ease;
 }
 
+.impress-on-uwa #title,
+.impress-on-uwa .bb,
+.impress-on-uwa #ldtl-ed5-excerpts,
+.impress-on-uwa #ldtl-ed5-cartoon,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
 
 /* Laying Down the Law 5th Edition Focus */
-.impress-on-ldtl-ed5-excerpts #ldtl-title,
+.impress-on-ldtl-ed5-excerpts #title,
+.impress-on-ldtl-ed5-excerpts #ldtl-ed5-cartoon,
+.impress-on-ldtl-ed5-excerpts h4,
+.impress-on-ldtl-ed5-excerpts #library-list,
+.impress-on-ldtl-ed5-excerpts .bb,
+.impress-on-ldtl-ed5-excerpts svg,
+.impress-on-ldtl-ed5-excerpts #blackstone-frontmatter,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed1,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed2,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed3,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed4,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed12,
 .impress-on-ldtl-ed5-excerpts g.editions,
-.impress-on-ldtl-ed5-cartoon #ldtl-title,
+.impress-on-ldtl-ed5-cartoon #title,
 .impress-on-ldtl-ed5-cartoon #ldtl-ed1,
 .impress-on-ldtl-ed5-cartoon #ldtl-ed2,
 .impress-on-ldtl-ed5-cartoon #ldtl-ed3,
 .impress-on-ldtl-ed5-cartoon #ldtl-ed4,
 .impress-on-ldtl-ed5-cartoon #ldtl-ed12,
-.impress-on-ldtl-ed5-cartoon g.editions,
-.impress-on-ldtl-ed5-hath #ldtl-title,
+.impress-on-ldtl-ed5-cartoon svg,
+.impress-on-ldtl-ed5-cartoon #ldtl-ed5-excerpts,
+.impress-on-ldtl-ed5-cartoon .bb,
+.impress-on-ldtl-ed5-cartoon .frame,
+.impress-on-ldtl-ed5-cartoon #blackstone-frontmatter,
+.impress-on-ldtl-ed5-hath #title,
+.impress-on-ldtl-ed5-hath svg,
 .impress-on-ldtl-ed5-hath #ldtl-ed1,
 .impress-on-ldtl-ed5-hath #ldtl-ed2,
 .impress-on-ldtl-ed5-hath #ldtl-ed3,
@@ -202,18 +251,253 @@
     transition: opacity 1s ease;
 }
 
+.impress-on-ldtl-ed5-hath #library-list,
+.impress-on-ldtl-ed5-hath .bb,
+.impress-on-ldtl-ed5-hath #ldtl-ed5-cartoon,
+.impress-on-ldtl-ed5-hath h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-frontmatter #library-list,
+.impress-on-blackstone-frontmatter .bb,
+.impress-on-blackstone-frontmatter #ldtl-ed5-cartoon,
+.impress-on-blackstone-frontmatter h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-focus #library-list,
+.impress-on-blackstone-focus .bb,
+.impress-on-blackstone-focus #ldtl-ed5-cartoon,
+.impress-on-blackstone-focus h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-footnotes #library-list,
+.impress-on-blackstone-footnotes .bb,
+.impress-on-blackstone-footnotes #ldtl-ed5-cartoon,
+.impress-on-blackstone-footnotes h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-1 .bb,
+.impress-on-salk-overview-1 #salk-table,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blankard-focus .bb,
+.impress-on-blankard-focus #salk-table,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-2 .bb,
+.impress-on-salk-overview-2 #salk-table,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.impress-on-smith-focus .bb,
+.impress-on-smith-focus #salk-table,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-peerwilliams-overview-1 .bb,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-3 .bb,
+.impress-on-salk-overview-3 h4,
+.impress-on-salk-overview-3 #salk-table,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-4 .bb,
+.impress-on-salk-overview-4 #salk-table,
+.impress-on-salk-overview-4 h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-5 .bb,
+.impress-on-salk-overview-5 #salk-table,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-6 .bb,
+.impress-on-salk-overview-6 #salk-table,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-table .bb,
+.impress-on-salk-table h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-focus-2 .bb,
+.impress-on-blackstone-focus-2 #ldtl-ed5-cartoon,
+.impress-on-blackstone-focus-2 h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-focus-3 #ldtl-ed5-cartoon,
+.impress-on-blackstone-focus-3 h4,
+.impress-on-blackstone-focus-3 #library-list,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-focus-4 h4,
+.impress-on-blackstone-focus-4 #ldtl-ed5-excerpts,
+.impress-on-blackstone-focus-4 #library-list,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-overview #title {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+.impress-on-overview-pile svg,
+.impress-on-overview-pile #title,
+.impress-on-overview-pile .book,
+.impress-on-overview-pile .book::before,
+.impress-on-overview-pile .book::after,
+.impress-on-overview-pile #uwa-law-library,
+.impress-on-overview-pile #photo,
+.impress-on-overview-pile #ldtl-ed5-excerpts,
+.impress-on-overview-pile #ldtl-ed5-cartoon,
+.impress-on-overview-pile #library-list,
+.impress-on-overview-pile .bb,
+.impress-on-overview-pile #blackstone-frontmatter,
+.impress-on-overview-pile #salk-content,
+.impress-on-overview-pile #peerwilliams-content,
+.impress-on-overview-pile #salk-table,
+.impress-on-overview-neat svg,
+.impress-on-overview-neat #title,
+.impress-on-overview-neat .book,
+.impress-on-overview-neat .book::before,
+.impress-on-overview-neat .book::after,
+.impress-on-overview-neat #uwa-law-library,
+.impress-on-overview-neat #photo,
+.impress-on-overview-neat #ldtl-ed5-excerpts,
+.impress-on-overview-neat #ldtl-ed5-cartoon,
+.impress-on-overview-neat #library-list,
+.impress-on-overview-neat .bb,
+.impress-on-overview-neat #blackstone-frontmatter,
+.impress-on-overview-neat #salk-content,
+.impress-on-overview-neat #peerwilliams-content,
+.impress-on-overview-neat #salk-table,
+.impress-on-overview-neat h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-overview-2 #title h1,
+.impress-on-overview-2 #title h2,
+.impress-on-overview-2 #title h3,
+.impress-on-overview-2 #title h4,
+.impress-on-overview-2 .frame,
+.impress-on-overview-2 svg .editions,
+.impress-on-overview-2 #ldtl-ed5-cartoon,
+.impress-on-overview-2 #library-list,
+.impress-on-overview-2 h4,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-overview-chapters h1,
+.impress-on-overview-chapters h2,
+.impress-on-overview-chapters #title h3,
+.impress-on-overview-chapters #title h4,
+.impress-on-overview-chapters svg,
+.impress-on-overview-chapters svg .editions,
+.impress-on-overview-chapters #ldtl-ed4,
+.impress-on-overview-chapters #ldtl-ed5-cartoon,
+.impress-on-overview-chapters #library-list,
+.impress-on-overview-chapters .bb,
+.impress-on-overview-chapters #blackstone-frontmatter,
+.impress-on-overview-chapters .frame {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-overview-chapters-4 svg,
+.impress-on-overview-chapters-4 #ldtl-ed5-cartoon,
+.impress-on-overview-chapters-4 #library-list,
+.impress-on-overview-chapters-4 .bb,
+.impress-on-overview-chapters-4 #blackstone-frontmatter,
+.impress-on-overview-chapters-4 #uwa-law-library,
+.impress-on-overview-chapters-4 #ldtl-ed5-excerpts,
+.impress-on-overview-chapters-4 h1,
+.impress-on-overview-chapters-4 h2,
+.impress-on-overview-chapters-4 h3,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-overview-chapters-4 h4 {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .impress-on-ldtl-ed5-2 .book,
-.impress-on-ldtl-title .book,
+.impress-on-title .book,
 .impress-on-ldtl-title-slide-3 .book,
 .impress-on-ldtl-ed5-cartoon .book,
 .impress-on-ldtl-ed5-excerpts .book,
-.impress-on-ldtl-ed5-hath .book {
+.impress-on-ldtl-ed5-hath .book,
+.impress-on-finale .book {
     transform: rotateY(45deg);
 }
 
 
-.impress-on-ldtl-title svg,
-.impress-on-ldtl-title-slide .frame,
+.impress-on-title svg,
 .impress-on-photo svg {
     opacity: 0;
     transition: opacity 1s ease;
@@ -250,8 +534,113 @@
     transition: opacity 1s;
 }
 
-
 .impress-on-ldtl-ed5-hath #ldtl-slide-excerpts {
     opacity: 1;
     transition: opacity 1s;
+}
+
+.report {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-3 #salk-smith,
+.impress-on-salk-overview-3 #peerwilliams-content,
+.impress-on-salk-overview-4 #salk-smith,
+.impress-on-salk-overview-4 #peerwilliams-content,
+.impress-on-salk-overview-5 #salk-smith,
+.impress-on-salk-overview-5 #peerwilliams-content,
+.impress-on-salk-overview-6 #salk-smith,
+.impress-on-salk-overview-6 #peerwilliams-content,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-salk-overview-4 .report {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-focus-4 .notdictionary .slide,
+.impress-on-blackstone-focus-5 .notdictionary .slide,
+.impress-on-blackstone-focus-6 .notdictionary .slide,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-focus-5 #ldtl-ed5-excerpts {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-blackstone-focus-6 #ldtl-ed5-excerpts {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-overview .frame,
+.impress-on-overview #ldtl-title,
+.impress-on-overview .editions,
+.impress-on-overview #ldtl-ed5-excerpts,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+#overview-pile,#overview-neat {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#overview-pile.present,#overview-neat.present {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.impress-on-overview-chapters-4 .book {
+    transform: rotateY(45deg);
+}
+
+.impress-on-finale svg,
+.impress-on-finale #ldtl-ed5-cartoon,
+.impress-on-finale #library-list,
+.impress-on-finale .bb,
+.impress-on-finale #blackstone-frontmatter,
+.impress-on-finale #uwa-law-library,
+.impress-on-finale #ldtl-ed5-excerpts,
+.impress-on-finale h1,
+.impress-on-finale h2,
+.impress-on-finale h3,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.finale.frame {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+    filter: grayscale(100%);
+    animation: 1s ease 0s 1 initAnimation;
+    transform: translateY(182px) translateX(-100px) translateZ(-255px) rotateY(44deg);
+}
+
+.impress-on-finale .book,
+.impress-on-finale .book::before,
+.impress-on-finale .book::after,
+.impress-on-finale #title,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#ldtl-ed5-frame {
+    opacity: 0;
+}
+
+.impress-on-finale #ldtl-ed5-frame {
+    opacity: 1;
 }
