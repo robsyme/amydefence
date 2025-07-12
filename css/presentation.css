@@ -1,0 +1,257 @@
+.slide h1, .slide h2, .slide h3 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.slide h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.slide h2 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.slide h3 {
+    font-size: 2em;
+    color: #444;
+    font-weight: 300;
+}
+
+.book {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-15deg);
+    transition: 1s ease;
+    animation: 1s ease 0s 1 initAnimation;
+}
+
+
+/* Start of Selection */
+.active .book,
+.impress-on-timeline .book {
+    transform: rotateY(0deg);
+}
+
+/* End of Selection */
+
+.book> :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 300px;
+    transform: translateZ(17.5px);
+    background-color: #01060f;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 5px 5px 20px #66666641;
+}
+
+.spine {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 35px;
+    height: 300px;
+    border-radius: 0 2px 2px 0;
+    transform: translateX(-15px) rotateY(90deg);
+}
+
+.book::before {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    top: 8px;
+    width: 33px;
+    border-radius: 0 5px 5px 0;
+    height: 284px;
+    transform: translateX(174.5px) rotateY(90deg);
+    background: linear-gradient(90deg,
+            #fff 0%,
+            #f9f9f9 5%,
+            #fff 10%,
+            #f9f9f9 15%,
+            #fff 20%,
+            #f9f9f9 25%,
+            #fff 30%,
+            #f9f9f9 35%,
+            #fff 40%,
+            #f9f9f9 45%,
+            #fff 50%,
+            #f9f9f9 55%,
+            #fff 60%,
+            #f9f9f9 65%,
+            #fff 70%,
+            #f9f9f9 75%,
+            #fff 80%,
+            #f9f9f9 85%,
+            #fff 90%,
+            #f9f9f9 95%,
+            #fff 100%);
+}
+
+.book::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 200px;
+    height: 300px;
+    transform: translateZ(-17.5px);
+    background-color: #01060f;
+    border-radius: 0 5px 5px 0;
+    box-shadow: -10px 0 50px 10px #66666641;
+}
+
+#timeline-chart .tick {
+    stroke-width: 1px;
+}
+
+.frame {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: solid 10px #555;
+    margin: auto;
+    box-shadow: -3px -3px 12px #999;
+}
+
+.border {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: solid 30px rgb(255, 255, 255);
+    box-shadow: -3px -3px 12px #999;
+}
+
+.frame > .border > img {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    border-top: solid 2px #aaa;
+    border-left: solid 2px #aaa;
+    border-bottom: solid 2px #ccc;
+    border-right: solid 2px #ccc;
+}
+
+.frame img#bw-photo {
+    filter: grayscale(100%);
+}
+
+.slide {
+    width: 1600px;
+    height: 900px;
+    padding: 10px;
+    padding-top: 20%;
+    box-sizing: border-box;
+}
+
+.future .slide,
+.past .slide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.present .slide {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.impress-on-ldtl-title #uwa-law-library,
+.impress-on-photo #uwa-law-library {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+/* Laying Down the Law 5th Edition Focus */
+.impress-on-ldtl-ed5-excerpts #ldtl-title,
+.impress-on-ldtl-ed5-excerpts #ldtl-ed1,
+.impress-on-ldtl-ed5-excerpts #ldtl-ed2,
+.impress-on-ldtl-ed5-excerpts #ldtl-ed3,
+.impress-on-ldtl-ed5-excerpts #ldtl-ed4,
+.impress-on-ldtl-ed5-excerpts #ldtl-ed12,
+.impress-on-ldtl-ed5-excerpts g.editions,
+.impress-on-ldtl-ed5-cartoon #ldtl-title,
+.impress-on-ldtl-ed5-cartoon #ldtl-ed1,
+.impress-on-ldtl-ed5-cartoon #ldtl-ed2,
+.impress-on-ldtl-ed5-cartoon #ldtl-ed3,
+.impress-on-ldtl-ed5-cartoon #ldtl-ed4,
+.impress-on-ldtl-ed5-cartoon #ldtl-ed12,
+.impress-on-ldtl-ed5-cartoon g.editions,
+.impress-on-ldtl-ed5-hath #ldtl-title,
+.impress-on-ldtl-ed5-hath #ldtl-ed1,
+.impress-on-ldtl-ed5-hath #ldtl-ed2,
+.impress-on-ldtl-ed5-hath #ldtl-ed3,
+.impress-on-ldtl-ed5-hath #ldtl-ed4,
+.impress-on-ldtl-ed5-hath #ldtl-ed12,
+.impress-on-ldtl-ed5-hath g.editions,
+.foo {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-ldtl-ed5-2 .book,
+.impress-on-ldtl-title .book,
+.impress-on-ldtl-title-slide-3 .book,
+.impress-on-ldtl-ed5-cartoon .book,
+.impress-on-ldtl-ed5-excerpts .book,
+.impress-on-ldtl-ed5-hath .book {
+    transform: rotateY(45deg);
+}
+
+
+.impress-on-ldtl-title svg,
+.impress-on-ldtl-title-slide .frame,
+.impress-on-photo svg {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impress-on-ldtl-title svg .editions, 
+.impress-on-ldtl-title-slide-3 svg .editions, 
+.impress-on-photo svg .editions {
+    opacity: 0%;
+    transition: opacity 1s;
+}
+
+#ldtl-title.past,
+.impress-on-timeline #ldtl-title {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.impress-on-photo .book,
+.impress-on-ldtl-title-slide-3 .book,
+.impress-on-ldtl-title-slide-3 .book::before,
+.impress-on-ldtl-title-slide-3 .book::after {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.impress-on-ldtl-ed5-hath #ldtl-slide-excerpts,
+.impress-on-blackstone-frontmatter #ldtl-slide-excerpts,
+.impress-on-blackstone-focus #ldtl-slide-excerpts,
+.impress-on-blackstone-footnotes #ldtl-slide-excerpts,
+.impress-on-blackstone-focus #blackstone-excerpts ,
+.impress-on-blackstone-footnotes #blackstone-excerpts {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+.impress-on-ldtl-ed5-hath #ldtl-slide-excerpts {
+    opacity: 1;
+    transition: opacity 1s;
+}
