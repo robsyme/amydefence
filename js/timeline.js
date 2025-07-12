@@ -84,7 +84,7 @@ function createTimeline() {
         .enter()
         .append("text")
         .attr("x", d => xScale(d.year))
-        .attr("y", d => d.above ? height/2 - 28 : height/2 + 15)
+        .attr("y", d => d.above ? height/2 - 35 : height/2 + 15)
         .attr("text-anchor", "middle")
         .attr("font-size", "8px")
         .attr("font-weight", "bold")

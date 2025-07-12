@@ -27,7 +27,7 @@
     color: #016b54;
 }
 
-.book {
+.book, .book::after, .book::before {
     position: relative;
     transform-style: preserve-3d;
     transform: rotateY(-15deg);
@@ -173,9 +173,8 @@ svg text {
     object-fit: contain;
 }
 
-.impress-on-ldtl-title-slide-3 #title {
-    opacity: 0;
-    transition: opacity 1s ease;
+.noClick {
+    pointer-events: none;
 }
 
 .impress-on-title h4,
@@ -183,31 +182,41 @@ svg text {
 .impress-on-title #library-list,
 .impress-on-title #ldtl-ed5-cartoon,
 .impress-on-title #ldtl-ed5-excerpts,
+.impress-on-title #uwa-law-library,
 .impress-on-photo h4,
 .impress-on-photo .bb,
 .impress-on-photo #library-list,
 .impress-on-photo #ldtl-ed5-cartoon,
 .impress-on-photo #ldtl-ed5-excerpts,
 .impress-on-photo #title,
+.impress-on-photo .book,
+.impress-on-photo .book::before,
+.impress-on-photo .book::after,
+.impress-on-photo #uwa-law-library,
+.impress-on-photo svg,
 .foo {
     opacity: 0;
+    transition: opacity 1s ease;
 }
 
-.impress-on-ldtl-ed5-cartoon #library-list {
+.impress-on-ldtl-title-slide-3 #title,
+.impress-on-ldtl-title-slide-3 .bb,
+.impress-on-ldtl-title-slide-3 #ldtl-ed5-excerpts,
+.impress-on-ldtl-title-slide-3 #ldtl-ed5-cartoon,
+.foo {
     opacity: 0;
     transition: opacity 1s ease;
 }
 
-.impress-on-title #uwa-law-library,
-.impress-on-photo #uwa-law-library {
-    opacity: 0;
-    transition: opacity 1s ease;
-}
 
 .impress-on-uwa #title,
 .impress-on-uwa .bb,
 .impress-on-uwa #ldtl-ed5-excerpts,
 .impress-on-uwa #ldtl-ed5-cartoon,
+.impress-on-uwa #ldtl-ed2,
+.impress-on-uwa #ldtl-ed3,
+.impress-on-uwa #ldtl-ed4,
+.impress-on-uwa #library-list,
 .foo {
     opacity: 0;
     transition: opacity 1s ease;
@@ -238,6 +247,7 @@ svg text {
 .impress-on-ldtl-ed5-cartoon .bb,
 .impress-on-ldtl-ed5-cartoon .frame,
 .impress-on-ldtl-ed5-cartoon #blackstone-frontmatter,
+.impress-on-ldtl-ed5-cartoon #library-list,
 .impress-on-ldtl-ed5-hath #title,
 .impress-on-ldtl-ed5-hath svg,
 .impress-on-ldtl-ed5-hath #ldtl-ed1,
@@ -381,11 +391,6 @@ svg text {
     transition: opacity 1s ease;
 }
 
-.impress-on-overview #title {
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
 
 .impress-on-overview-pile svg,
 .impress-on-overview-pile #title,
@@ -443,6 +448,9 @@ svg text {
 .impress-on-overview-chapters #title h4,
 .impress-on-overview-chapters svg,
 .impress-on-overview-chapters svg .editions,
+.impress-on-overview-chapters #ldtl-ed1,
+.impress-on-overview-chapters #ldtl-ed2,
+.impress-on-overview-chapters #ldtl-ed3,
 .impress-on-overview-chapters #ldtl-ed4,
 .impress-on-overview-chapters #ldtl-ed5-cartoon,
 .impress-on-overview-chapters #library-list,
@@ -463,6 +471,7 @@ svg text {
 .impress-on-overview-chapters-4 h1,
 .impress-on-overview-chapters-4 h2,
 .impress-on-overview-chapters-4 h3,
+.impress-on-overview-chapters-4 .frame,
 .foo {
     opacity: 0;
     transition: opacity 1s ease;
@@ -488,7 +497,7 @@ svg text {
 
 .impress-on-ldtl-ed5-2 .book,
 .impress-on-title .book,
-.impress-on-ldtl-title-slide-3 .book,
+.impress-on-photo .book,
 .impress-on-ldtl-ed5-cartoon .book,
 .impress-on-ldtl-ed5-excerpts .book,
 .impress-on-ldtl-ed5-hath .book,
@@ -497,8 +506,7 @@ svg text {
 }
 
 
-.impress-on-title svg,
-.impress-on-photo svg {
+.impress-on-title svg {
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -516,11 +524,10 @@ svg text {
     transition: opacity 1s;
 }
 
-.impress-on-photo .book,
 .impress-on-ldtl-title-slide-3 .book,
 .impress-on-ldtl-title-slide-3 .book::before,
 .impress-on-ldtl-title-slide-3 .book::after {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s;
 }
 
@@ -584,25 +591,52 @@ svg text {
 .impress-on-overview #ldtl-title,
 .impress-on-overview .editions,
 .impress-on-overview #ldtl-ed5-excerpts,
+.impress-on-overview #title,
 .foo {
     opacity: 0;
     transition: opacity 1s ease;
 }
 
-
-#overview-pile,#overview-neat {
+#overview-pile, #overview-neat {
+    display: none;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 0.25s ease;
 }
 
-#overview-pile.present,#overview-neat.present {
+#overview-pile.next, 
+#overview-pile.prev,
+#overview-neat.next,
+#overview-neat.prev {
+    display: block;
+    transition: opacity 0.25s ease;
+}
+
+#overview-pile.present,
+#overview-neat.present {
+    display: block;
     opacity: 1;
-    transition: opacity 1s ease;
+    transition: opacity 0.25s ease;
+}
+
+#overview-pile.next, #overview-neat.past, #overview-neat.prev {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.report { 
+    display: none;
+}
+
+.impress-on-salk-overview-3 .report,
+.impress-on-salk-overview-4 .report,
+.impress-on-salk-overview-5 .report {
+    display: block;
 }
 
 .impress-on-overview-chapters-4 .book {
     transform: rotateY(45deg);
 }
+
 
 .impress-on-finale svg,
 .impress-on-finale #ldtl-ed5-cartoon,
@@ -614,7 +648,10 @@ svg text {
 .impress-on-finale h1,
 .impress-on-finale h2,
 .impress-on-finale h3,
+.impress-on-finale #overview-pile,
+.impress-on-finale #overview-neat,
 .foo {
+    display: none;
     opacity: 0;
     transition: opacity 1s ease;
 }
