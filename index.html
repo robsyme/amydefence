@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id="impress">
+    <div id="impress" data-width="1920" data-height="1080">
 
         <div id="title" class="slide step" data-x="100" data-y="100" data-z="-200" data-rotate-y="45" >
             <h1>Layering Down the Law</h1>
@@ -82,66 +82,58 @@
 
         <div id="ldtl-ed5-2" class="step skip" data-x="-250" data-y="100" data-z="100"></div>
 
-        <div id="ldtl-ed5-cartoon" class="step slide" data-x="-150" data-y="500" data-z="0" data-rotate-y="0">
-            <div>
-                <img src="img/ldtl-ed5-cartoon.png" />
-            </div>
+        <div id="ldtl-ed5-cartoon" class="step slide" data-x="-150" data-y="570" data-z="0" data-rotate-y="0">
+            <img src="img/ldtl-ed5-cartoon.png" style="height: 600px" />
         </div>
 
-        <div id="ldtl-ed5-excerpts" class="step slide" data-x="-150" data-y="500" data-z="0" data-rotate-y="0">
-            <div style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
+        <div id="ldtl-ed5-excerpts" class="step slide" data-x="-150" data-y="570" data-z="0" data-rotate-y="0">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-end">
                 <h3>The Uninhabited Country Principle</h3>
                 <img src="img/ldtl-ed5-exerpt1.png" style="width: 100%; height: auto;" />
                 <h4 class="chapter">Chapter 1</h4>
             </div>
-            <div style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-end">
                 <h3>Its Application to Australia</h3>
                 <img src="img/ldtl-ed5-exerpt2.png" style="width: 100%; height: auto;" />
                 <h4 class="chapter">Chapter 2</h4>
             </div>
-            <div style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-end">
                 <h3>The Received Black Box of English Law</h3>
                 <img src="img/ldtl-ed5-exerpt3.png" style="width: 100%; height: auto;" />
                 <h4 class="chapter">Chapter 3</h4>
             </div>
         </div>
 
-        <div id="ldtl-ed5-hath" class="step" data-x="-650" data-y="740" data-z="0" data-scale="0.35"></div> 
+        <div id="ldtl-ed5-hath" class="step" data-x="-680" data-y="750" data-z="0" data-scale="0.35"></div> 
         
-        <div id="blackstone-frontmatter" class="step" data-x="-650" data-y="1000" data-z="0" data-scale="1">
-            <div id="blackstone-excerpts" class="slide" style="margin-top: 200px; display: flex; align-items: flex-start; justify-content: space-between; gap: 2em;">
-                <img src="img/blackstone-frontmatter.png" />
-            </div>
+        <div id="blackstone-intro" class="step" data-x="-650" data-y="1000" data-scale="1"></div> 
+
+        <div id="blackstone-frontmatter" class="step slide" data-x="-650" data-y="1270" data-z="0" data-scale="0.6">
+            <img src="img/blackstone-frontmatter.png" />
         </div> 
 
-        <div id="blackstone-focus" class="step" data-x="-650" data-y="1250" data-scale="0.5"></div> 
+        <div id="blackstone-footnotes" class="step" data-x="-450" data-y="1500" data-scale="0.17"></div>
 
-        <div id="blackstone-footnotes" class="step" data-x="-450" data-y="1450" data-scale="0.2"></div>
-
-        <div id="salk-content" class="step skip" data-y="1600" data-scale="1">
-            <div id="salk-excerpts" class="slide" style="margin-top: 200px; display: flex; align-items: flex-start; justify-content: space-between; gap: 2em;">
-                <div style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
-                    <h3>Salk → Salkeld's Reports (1718)</h3>
-                    <img src="img/salk-frontmatter.png" style="width: 100%; height: auto;" />
-                </div>
-                <div style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
-                    <h3>Salk 411 → Blankard v Galdy</h3>
-                    <img src="img/salk-blankard.png" style="width: 100%; height: auto;" />
-                </div>
-                <div id="salk-smith" style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
-                    <h3>Salk 666 → Smith v Browne & Cooper</h3>
-                    <img src="img/salk-smith.png" style="width: 100%; height: auto;" />
-                </div>
+        <div id="salk-content" class="step slide" data-y="2100" data-scale="1" style="justify-content: space-around">
+            <div style="max-width: 33%; display: flex; flex-direction: column; align-items: center">
+                <h3>Salk → Salkeld's Reports (1718)</h3>
+                <img src="img/salk-frontmatter.png" style="width: auto; max-height: 800px;" />
+            </div>
+            <div style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
+                <h3>Salk 411 → Blankard v Galdy</h3>
+                <img src="img/salk-blankard.png" style="width: auto; max-height: 800px;" />
+            </div>
+            <div id="salk-smith" style="max-width: 33%; display: flex; flex-direction: column; align-items: center;">
+                <h3>Salk 666 → Smith v Browne & Cooper</h3>
+                <img src="img/salk-smith.png" style="width: auto; max-height: 800px;" />
             </div>
         </div>
 
-        <div id="salk-overview-1" class="step" data-x="-450" data-y="2000" data-scale="1"></div>
+        <div id="blankard-focus" class="step" data-x="-500" data-y="2400" data-scale="0.25"></div> 
 
-        <div id="blankard-focus" class="step" data-x="-500" data-y="2350" data-scale="0.25"></div> 
+        <div id="salk-overview-2" class="step" data-x="-450" data-y="2100" data-scale="1"></div>
 
-        <div id="salk-overview-2" class="step" data-x="-450" data-y="2000" data-scale="1"></div>
-
-        <div id="smith-focus" class="step" data-x="110" data-y="2200" data-scale="0.25"></div>
+        <div id="smith-focus" class="step" data-x="110" data-y="2250" data-scale="0.25"></div>
 
         <div id="peerwilliams-content" class="step skip"  data-x="1250" data-y="1600" data-scale="1">
             <div id="peerwilliams-excerpts" class="slide" style="margin-top: 200px; display: flex; align-items: flex-start; gap: 2em;">
@@ -193,15 +185,18 @@
 
         <div id="salk-overview-6" class="step" data-x="-450" data-y="2075" data-z="0" data-scale="0.25" data-rotate-y="0"></div>
 
-        <div id="salk-table" class="step" data-x="-480" data-y="2675" data-z="0" data-scale="1" data-rotate-y="0">
+        <div id="salk-table" class="step" data-x="-480" data-y="3000" data-z="0" data-scale="1" data-rotate-y="0">
             <div id="report-mod-excerpts" class="slide">
                 <div style="max-width: 33%; display: flex">
                     <img src="img/salk-table.png" style="width: 100%; height: auto;" />
                 </div>
             </div>
         </div>
+
         <div id="blackstone-focus-2" class="step" data-x="-650" data-y="1250" data-scale="0.5"></div> 
+        
         <div id="blackstone-focus-3" class="step" data-x="-1400" data-y="1250" data-scale="0.5" data-rotate-y="-25"></div> 
+        
         <div id="blackstone-focus-4" class="step" data-x="-1000" data-y="1250" data-scale="0.5" data-rotate-y="-10"></div> 
 
         <div id="bb-13" class="step skip bb notdictionary" data-x="-650" data-y="1000" data-z="-200" data-scale="0.5">

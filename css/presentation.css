@@ -151,11 +151,9 @@
 .slide {
     width: 1600px;
     height: 900px;
-    padding: 10px;
-    /* padding-top: 20%; */
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
@@ -170,9 +168,12 @@ svg text {
     font-style: normal;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
+.slide img,
+.slide div {
+    /* width: 100%;
+    height: 100%; */
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
 }
 
@@ -251,35 +252,37 @@ svg text {
 .impress-on-ldtl-ed5-cartoon .frame,
 .impress-on-ldtl-ed5-cartoon #blackstone-frontmatter,
 .impress-on-ldtl-ed5-cartoon #thankyou,
+.impress-on-ldtl-ed5-cartoon .chapter,
 .impress-on-ldtl-ed5-cartoon #library-list {
     opacity: 0;
     transition: opacity 1s ease;
 }
 
-#ldtl-ed5-cartoon {
-    align-items: flex-end
-}
+#ldtl-ed5-cartoon { align-items: flex-end }
 
 /* Slide: ldtl-ed5-excerpts */
+.impress-on-ldtl-ed5-excerpts svg,
+.impress-on-ldtl-ed5-excerpts .chapter,
+.impress-on-ldtl-ed5-excerpts .bb,
 .impress-on-ldtl-ed5-excerpts #title,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed5-cartoon,
-.impress-on-ldtl-ed5-excerpts h4,
 .impress-on-ldtl-ed5-excerpts #library-list,
-.impress-on-ldtl-ed5-excerpts .bb,
-.impress-on-ldtl-ed5-excerpts svg,
 .impress-on-ldtl-ed5-excerpts #blackstone-frontmatter,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed1,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed2,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed3,
 .impress-on-ldtl-ed5-excerpts #ldtl-ed4,
-.impress-on-ldtl-ed5-excerpts #ldtl-ed12,
-.impress-on-ldtl-ed5-excerpts g.editions {
+.impress-on-ldtl-ed5-excerpts #ldtl-ed12{
     opacity: 0;
     transition: opacity 1s ease;
 }
 
-#ldtl-ed5-excerpts {
-    margin-top: 230px;
+#ldtl-ed5-excerpts h3 {
+    margin-bottom: 15px;
+}
+
+.chapter {
+    margin-bottom: 0;
 }
 
 /* Slide ldtl-ed5-hath */
@@ -309,11 +312,11 @@ svg text {
     transition: opacity 1s ease;
 }
 
-/* Slide: blackstone-focus */
-.impress-on-blackstone-focus #library-list,
-.impress-on-blackstone-focus .bb,
-.impress-on-blackstone-focus #ldtl-ed5-cartoon,
-.impress-on-blackstone-focus h4 {
+/* Slide: blackstone-intro */
+.impress-on-blackstone-intro #library-list,
+.impress-on-blackstone-intro .bb,
+.impress-on-blackstone-intro #ldtl-ed5-cartoon,
+.impress-on-blackstone-intro h4 {
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -327,9 +330,9 @@ svg text {
     transition: opacity 1s ease;
 }
 
-/* Slide: salk-overview-1 */
-.impress-on-salk-overview-1 .bb,
-.impress-on-salk-overview-1 #salk-table {
+/* Slide: salk-content */
+.impress-on-salk-content .bb,
+.impress-on-salk-content #salk-table {
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -660,9 +663,9 @@ svg text {
 
 .impress-on-ldtl-ed5-hath #ldtl-slide-excerpts,
 .impress-on-blackstone-frontmatter #ldtl-slide-excerpts,
-.impress-on-blackstone-focus #ldtl-slide-excerpts,
+.impress-on-blackstone-intro #ldtl-slide-excerpts,
 .impress-on-blackstone-footnotes #ldtl-slide-excerpts,
-.impress-on-blackstone-focus #blackstone-excerpts ,
+.impress-on-blackstone-intro #blackstone-excerpts ,
 .impress-on-blackstone-footnotes #blackstone-excerpts {
     opacity: 1;
     transition: opacity 1s;
